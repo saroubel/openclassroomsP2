@@ -24,6 +24,14 @@ body {
     padding: 0 50px;
     box-sizing: border-box;
 }
+/****** flexbox for header ******/    
+.nav-header {display: flex; justify-content: space-between; align-items:center;}
+.logo-cadre {width: 161.09px; height: 79px; gap: 10px;padding: 30px 50px; }
+.logo-booki {width: 61.09px; height: 19px;} 
+.nav-heb-act-container{display: flex ; justify-content: space-between; }
+.nav-heb-act {display:flex; align-items: center; list-style-type: none; gap: 68px; width: 244px; height: 35px;}
+/* gap : Espace entre les éléments */
+/* display: flex; Définit le conteneur flexible */
 
 a {
     color: inherit;
