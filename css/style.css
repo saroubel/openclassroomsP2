@@ -32,9 +32,10 @@ body {
 
 .nav-list-container{display: flex ; justify-content: space-between; margin-top: -7px;}
 .nav-list {display:flex; list-style-type: none; width: 244px; height: 35px; gap: 68px;} /* gap : Espace entre les éléments */
-.nav-list li :hover {color: #0065FC; size: 20px; border-top: 3px solid #0065FC; padding-top: 15px;} /* Hover: ajouter de l'interactivité lorsque le curseur de la souris est positionné dessus */
+.nav-list li :hover {color: #0065FC; size: 20px; border-top: 3px solid #0065FC; padding-top: 15px;} 
+/* Hover: ajouter de l'interactivité lorsque le curseur de la souris est positionné dessus */
 /* border-top: version desktop --- border-bottom: version Mobile */
-
+ 
 a {
     color: inherit;
     text-decoration: none;
