@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/style.css">
 
     
@@ -18,37 +18,43 @@
 
 <body>
     <div class="main-container">
-    
+        <!-- L'En-tête de la page -->
         <header>
         <nav class="header-nav"> 
 
-            <div class="logo-cadre"> <!-- ajouter logo -->
-                <img src="./images/logo/Booki.png" alt="logo booki" class="logo-booki">  <!-- style="width: 61.09px; height: 19px;" -->
-            </div>   
+            <div class="logo-cadre"> 
+                <img src="./images/logo/Booki.png" alt="logo booki" class="logo-booki"> 
+            </div>  
+            <!-- ajouter logo avec ./ chemin relatif pour qu'il s'affiche sur GitHub--> 
+            <!-- Pour ajouter le style dans le Html pour Logo > style="width: 61.09px; height: 19px;" -->
             
             <!-- liste de navigation  -->
             <div class="nav-list-container"> 
-                    <ul class="nav-list">
-                        <li><a href="#hébergements" title="Hébergements"> Hébergements</a></li>
+                    <ul class="nav-list"> 
+                        <li><a href="#hebergements" title="Hébergements"> Hébergements</a></li>
                         <li><a href="#activités" title="Activités">Activités</a></li>
                     </ul> 
             </div> 
+            <!--Quand on clique sur les nav, il sera redirigé vers hebergements ou activités - l'ancrage #h même nom sur id heb ou act -->
         </nav>
         </header>
 
-        <!-- Description-->
-        <section> 
-            <h2> Trouver votre hébergement pour des vacances de rêve </h2>
-            <p> En plein centre-ville ou en pleine nature </p>
+        <!-- Introduction de la page-->
+        <section class="intro-page"> 
+                <h2 class="section-title"> Trouver votre hébergement pour des vacances de rêve </h2>
+                <p> En plein centre-ville ou en pleine nature </p>
         </section>
 
-        <!-- Formulaire Recherche -->
-
+        <!-- Formulaire de Recherche -->
         <main>
-            <div class="hebergements-and-populaires">
-                <section class="hebergements">
 
+            <div class="hebergements-and-populaires">  
+
+                <!-- Hébergements à Marseille -->
+                <section class="hebergements" id="hebergements"> 
                 </section>
+
+                <!-- Les plus populaires -->
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
