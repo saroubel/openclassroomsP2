@@ -43,6 +43,11 @@ body {
 /* border-top en version desktop bordure de 3px --- border-bottom en version Mobile */
 /* padding-top : un rembourrage de 15px en haut */
 
+/* introduction de la page */
+.intro-page {display: flex; flex-direction: column;} /* h2 et p seront disposés verticalement */
+p {margin-top: 8px;} /* dans l'intro l'espace en haut entre p et h2  */ 
+
+
 a {
     color: inherit;
     text-decoration: none;
