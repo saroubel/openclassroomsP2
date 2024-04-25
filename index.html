@@ -28,24 +28,42 @@
             <!-- ajouter logo avec ./ chemin relatif pour qu'il s'affiche sur GitHub--> 
             <!-- Pour ajouter le style dans le Html pour Logo > style="width: 61.09px; height: 19px;" -->
             
+
             <!-- liste de navigation  -->
             <div class="nav-list-container"> 
                     <ul class="nav-list"> 
                         <li><a href="#hebergements" title="Hébergements"> Hébergements</a></li>
                         <li><a href="#activités" title="Activités">Activités</a></li>
                     </ul> 
-            </div> 
-            <!--Quand on clique sur les nav, il sera redirigé vers hebergements ou activités - l'ancrage #h même nom sur id heb ou act -->
+            </div>        <!--Quand on clique sur les nav, il sera redirigé vers hebergements ou activités - l'ancrage # -->
+
         </nav>
         </header>
 
         <!-- Introduction de la page-->
-        <section class="intro-page"> 
+        <div class="intro-page"> 
                 <h2 class="section-title"> Trouver votre hébergement pour des vacances de rêve </h2>
                 <p> En plein centre-ville ou en pleine nature </p>
-        </section>
+        </div>
 
         <!-- Formulaire de Recherche -->
+        <div class="search-form">
+            <form class="search-bar" action="#"> 
+
+                <div class="icon-box"> 
+                    <i class="fa-solid fa-location-dot"></i>                            <!-- https://fontawesome.com/search?q=local&o=r -->
+                </div>          
+
+                <div class="search-city"> 
+                    <input type="text" placeholder="Marseille, France" title="Tapez la recherche"> 
+                </div>
+            
+                <button class="search" type="submit"> Rechercher </button>              <!-- version Desktop -->
+
+            </form>
+        </div>
+
+
         <main>
 
             <div class="hebergements-and-populaires">  

@@ -25,8 +25,8 @@ body {
     box-sizing: border-box;
 }
 /*** Header ***/ 
-.header-nav {display: flex; justify-content: space-between; height: 79px;} 
-/* un conteneur flexbox horizontal avec logo et nav distribués de manière égale et espacée, tout avec hauteur 79px */ 
+.header-nav {display: flex; justify-content: space-between; height: 79px; margin-bottom: 30px;} 
+/* un conteneur flexbox horizontal avec logo et nav distribués de manière égale et espacée, tout avec hauteur 79px , espace entre header et intro de 30px*/ 
 
 .logo-cadre {width: 161.09px; gap: 10px; padding: 30px 0px; }      
 /* largeur 161 px, espacement interne 10px, un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
@@ -43,10 +43,12 @@ body {
 /* border-top en version desktop bordure de 3px --- border-bottom en version Mobile */
 /* padding-top : un rembourrage de 15px en haut */
 
-/* introduction de la page */
-.intro-page {display: flex; flex-direction: column;} /* h2 et p seront disposés verticalement */
-p {margin-top: 8px;} /* dans l'intro l'espace en haut entre p et h2  */ 
+/* intro de la page */
+.intro-page {display: flex; flex-direction: column; }     /* h2 et p seront disposés verticalement */
+p { margin-top: 8px; }                                   /* l'espace en haut entre p et h2  */ 
 
+/* gap 35px dans la maquette : espace entre les elements */
+.intro-page, .search-form, .filter-bar { margin-bottom: 35px;}    
 
 a {
     color: inherit;
