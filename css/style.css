@@ -25,28 +25,83 @@ body {
     box-sizing: border-box;
 }
 /*** Header ***/ 
-.header-nav {display: flex; justify-content: space-between; height: 79px;} 
-/* un conteneur flexbox horizontal avec logo et nav distribués de manière égale et espacée, tout avec hauteur 79px */ 
+.header-nav {display: flex; justify-content: space-between; 
+            height: 79px; 
+            margin-bottom: 30px;
+} 
+/* un conteneur flexbox horizontal avec logo et nav distribués de manière égale et espacée, 
+tout avec hauteur 79px , espace entre header et intro de 30px*/ 
 
-.logo-cadre {width: 161.09px; gap: 10px; padding: 30px 0px; }      
-/* largeur 161 px, espacement interne 10px, un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
-.logo-booki {width: 61.09px; height: 19px;}                        
-/* largeur de 61,09px et hauteur de 19px */
+
+.logo-cadre {width: 161.09px; 
+            gap: 10px; 
+            padding: 30px 0px; }      
+                                                        /* largeur 161 px, espacement interne 10px, 
+                                                        un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
+
+.logo-booki {width: 61.09px; height: 19px;}             /* largeur de 61,09px et hauteur de 19px */
 
 
-.nav-list-container{display: flex ; justify-content: space-between; margin-top: -7px;}
-/* remonter le conteneur de Nav par rapport à sa position initiale */
-.nav-list {display:flex; list-style-type: none; width: 244px; height: 35px; gap: 68px;} 
-/* gap : Espace entre les éléments */
-.nav-list li :hover {color: #0065FC; width:20px; border-top: 3px solid #0065FC; padding-top: 15px;} 
-/* Hover: ajouter de l'interactivité en bleu au survol de la souris */
-/* border-top en version desktop bordure de 3px --- border-bottom en version Mobile */
-/* padding-top : un rembourrage de 15px en haut */
+.nav-list-container{ display: flex ; 
+                    justify-content: space-between; 
+                    margin-top: -7px; 
+}                                                       /* remonter le conteneur de Nav par rapport à sa position initiale */
 
-/* introduction de la page */
-.intro-page {display: flex; flex-direction: column;} /* h2 et p seront disposés verticalement */
-p {margin-top: 8px;} /* dans l'intro l'espace en haut entre p et h2  */ 
+.nav-list { display:flex; 
+            list-style-type: none; 
+            width: 244px; height: 35px; 
+            gap: 68px;}                                 /* gap : Espace entre les éléments */
 
+.nav-list li :hover { width:20px; 
+                      color: #0065FC; 
+                      border-top: 3px solid #0065FC; 
+                      padding-top: 15px;} 
+                                                        /* Hover: ajouter de l'interactivité en bleu au survol de la souris */
+                                                        /* border-top en version desktop --- border-bottom en version Mobile */
+                                                        /* padding-top : un rembourrage de 15px en haut */
+
+/*** intro de la page ***/
+.intro-page {display: flex; 
+            flex-direction: column; }                   /* h2 et p seront disposés verticalement */
+
+p { margin-top: 8px; }                                  /* l'espace en haut entre p et h2  */ 
+
+
+/*** Recherche ***/
+.search-form {  display: flex; align-items: center; 
+                height: 49px; } 
+
+.search-bar {display: flex; flex-direction: row;        /*disposés horizontalement dans la même ligne*/
+             height: 49px; }                            /* + width: 377px; rendre box icone plus petite & gap: 24px; barre plus large*/
+
+/* icon localisation */
+.icon-box { height: 49px ; width: 50px;  
+            background-color: #F2F2F2; 
+            border-radius: 15px 0px 0px 15px;}
+
+i.fa-solid.fa-location-dot { height: 18px; width: 14px; 
+                            margin-top: 15px; margin-left: 18px; 
+                            color: #000000;}
+
+
+/* input */
+.search-city { width: fit-content; }                    /* Ajuster la largeur au contenu */
+
+.search-city input { height: 45px;
+                    font-weight: 700; font-size: 18px; line-height: 21.13px;
+                    border :none; outline: none; 
+                    border-top: #F2F2F2 solid 1px;
+                    border-bottom: #F2F2F2 solid 1px;
+                    text-align: center;} 
+
+/* Bouton de recherche  */
+.search {   height: 49px; width: 132px; 
+            background-color: #0065FC; 
+            color:#FFFFFF; font-size: 18px; line-height: 21.13px; font-weight: 700;
+            border: 1px #0065FC; border-radius: 0px 15px 15px 0px; }
+
+            
+.intro-page, .search-form, .filter-bar { margin-bottom: 35px;}    /* gap 35px dans la maquette : espace entre les elements */
 
 a {
     color: inherit;
