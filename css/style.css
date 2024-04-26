@@ -100,8 +100,50 @@ i.fa-solid.fa-location-dot { height: 18px; width: 14px;
             color:#FFFFFF; font-size: 18px; line-height: 21.13px; font-weight: 700;
             border: 1px #0065FC; border-radius: 0px 15px 15px 0px; }
 
-            
-.intro-page, .search-form, .filter-bar { margin-bottom: 35px;}    /* gap 35px dans la maquette : espace entre les elements */
+
+/*** filter ***/
+.filter-bar {   display: flex;
+                height: 50px;
+                gap: 15px; 
+  }                                                             /* hauteur 50px, espace entre les elements 15px, centrer tout */
+
+.filter-bar h2 {font-size: 18px;}                               /* size de h2 */
+
+.filter-container { display: flex;
+                    gap: 15px;}
+
+.filter {   display: flex; align-items: baseline;
+            gap: 10px;
+            border: #D9D9D9 solid 2px; border-radius: 25px;
+            padding: 4px 19px 4px 19px; 
+}                                                               /* gap 10px espace entre icône et txt, 
+                                                                baseline : aligne les éléments flexibles en utilisant leur ligne de base comme référence*/ 
+
+.filter p { font-size: 18px; 
+            font-weight: 700;
+}                                                               /* font-weight : txt en gras */
+
+.filter-container :hover {background-color: #DEEBFF;}     
+
+
+/*** Info Bar ****/
+.info-bar { display: flex; align-items: baseline;
+            gap: 10px; 
+            margin-bottom: 35px;
+        }                                                       /* assure que l'icône et le txt de .info-bar soient alignés de manière Cohérent, 
+                                                                   en fonction de leur ligne de base respective */
+                                                                /* gap 10px entre icone et txt, margin-bottom: espace entre info bar et main */
+
+i.fa-solid.fa-info { 
+            border: 1px solid #D9D9D9; border-radius: 50%;
+            text-align: center;
+            width: 16px;  padding: 8px;  }                      /* width 16px assure que l'icône a une taille fixe, c utile pour 
+                                                                   maintenir une cohérence visuelle avec d'autres éléments de la page */
+                                                                /* padding 8px ajoute un espace autour de l'icône, la rendant plus visible */ 
+
+
+.intro-page, .search-form, .filter-bar { margin-bottom: 35px;}   /* dans la maquette gap 35px -> espace entre les elements verticalement */
+
 
 a {
     color: inherit;
