@@ -57,8 +57,15 @@
                 <div class="search-city"> 
                     <input type="text" placeholder="Marseille, France" title="Tapez la recherche"> 
                 </div>
-            
-                <button class="search" type="submit"> Rechercher </button>              <!-- version Desktop -->
+
+                <!-- vs Mobile -->       
+                <button class="search-mobile" type="submit" aria-label="Rechercher"> 
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>                                           <!-- aria-label : ajoute une étiquette accessible "R" à un élément --> 
+                
+                <!-- vs Desktop -->
+                <button class="search" type="submit"> Rechercher </button>     
+                
 
             </form>
         </div>
@@ -173,9 +180,13 @@
                         </a>
                     </div>
                 </section>
+
             </div>
         </main>
+
+
         <footer></footer>
+
     </div>
 </body>
 

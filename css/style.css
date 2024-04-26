@@ -100,6 +100,20 @@ i.fa-solid.fa-location-dot { height: 18px; width: 14px;
             color:#FFFFFF; font-size: 18px; line-height: 21.13px; font-weight: 700;
             border: 1px #0065FC; border-radius: 0px 15px 15px 0px; }
 
+.search-mobile {
+    height: 49px; width: 49px; 
+    border: 1px solid #0065FC ; border-radius: 15px;
+    padding: 15px 16px; 
+    background: #0065FC;
+    display: none;                      /* Masquer le bouton */
+    /* display: inline-block; */        /* Afficher le bouton */
+}
+
+/* icône Loupe */
+i.fa-solid.fa-magnifying-glass{ color: #FFFFFF;
+                                height: 17px; width: 17px; }
+    
+
 
 /*** filter ***/
 .filter-bar {   display: flex;
