@@ -179,8 +179,10 @@ a {
 
 
 .card img {
-    object-fit: cover;
+    object-fit: cover;                                                      
 }
+/* assurer que img remplisse l'intégralité du conteneur tout
+en recadrant les bords supérieur et inférieur */
 
 .card-title {
     font-size: 16px;
@@ -237,10 +239,11 @@ a {
 
     /* Le contenu de la carte */
 .hebergements-cards .card-content {
-    width: 250.33px;
+    width: 100%;                                                     /* width: 250.33px; */
     height: 64.25px; 
-    padding: 0px 15px 0px 15px;                                      /* padding left et right */
-  
+    padding: 0px 15px 0px 15px;                                      /* padding left et right */                                                            
+    display: flex; flex-direction: column;                           /* flexbox - les cartes verticales avec un espace égale */
+    justify-content: space-between;   
 }
 
     /* Espace entre les éléments de contenu de la carte */
