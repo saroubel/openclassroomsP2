@@ -219,10 +219,10 @@ en recadrant les bords supérieur et inférieur */
     width: 100%; /* width: 250.33px;  */
     height: 124px;
     border: 5px solid #ffffff; 
-    border-radius: 20px 20px 0px 0px;}
-    /* laisser .card img{ object-fit: cover;} 
-    pour que l’image ne sera pas déformée*/
+    border-radius: 20px 20px 0px 0px;
 
+    /* laisser .card img{ object-fit: cover;} pour que l’image ne sera pas déformée*/
+}
 
     /* La carte */
 .hebergements .card{
@@ -247,15 +247,18 @@ en recadrant les bords supérieur et inférieur */
 }
 
     /* Espace entre les éléments de contenu de la carte */
-.hebergements .card-title { margin-top: 0px;                        /* coller l'élément en haut */
-                            margin-bottom: 4px; }                   /* car espace entre les éléments est 4px = gap */ 
+.hebergements .card-title { 
+    margin-top: 0px;                                                 /* coller l'élément en haut */
+    margin-bottom: 4px; }                                            /* car espace entre les éléments est 4px = gap */ 
                                                    
 
-.hebergements .card-subtitle {margin: 0px; }                        /* le margin top de p de card-subtitle basé sur le p de la page */
+.hebergements .card-subtitle {
+    margin: 0px; }                                                  /* le margin top de p de card-subtitle basé sur le p de la page */
 
-.hebergements .card-rating {  margin-top: 4px; }                    
+.hebergements .card-rating {  
+    margin-top: 4px; }                    
 
-/* la liste des cartes */
+/* la liste des cartes hebergements */
 .hebergements .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
@@ -315,3 +318,49 @@ en recadrant les bords supérieur et inférieur */
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
+/****** Activités ******/
+.activites {
+    background: #FFFFFF;
+    padding: 30px;                                                          /* padding de conteneur activités*/
+    margin-top: 30px;                                                       /* pour le conteneur activités */
+    margin-bottom: 30px;                                                    /* pour qu'il soit pas coller en haut avec hebergements-populaires et en bas avec footer */
+}
+
+.activites .section-title { 
+    margin-bottom: 30px;}                                                  /* Espace entre titre et carte - le gap au milieu de conteneur est 30px*/
+                     
+/* Flexbox pour la liste des cartes activités */
+.activites-cards { 
+    display: flex;
+    justify-content: space-between;  
+    flex-direction: row;
+} 
+
+.activites-cards .card {
+    width: 297.5px;          
+    padding: 0px;                                            
+    box-shadow: 0px 3px 15px 0px #0000001A;                              /* ombre portée sur la carte */
+    display: flex; flex-direction: column; justify-content: center;        /* le contenu de la carte soit verticalement et centré */
+    /* height: 50%; */                                                     /* La moitié supérieure de la carte est occupée par img */
+}
+
+.activites-cards img {
+    width: 100%;                                                            
+    height: 380px;
+    border: none;
+    border-radius: 20px 20px 0px 0px;      
+
+    /* border radius top left et top right */ 
+    /* Width : 297.5px; ou  100% : image remplisse la largeur de la carte */
+    /* laisser .card img{ object-fit: cover;} pour que l’image ne sera pas déformée*/
+}
+
+.activites-cards .card-content {
+    padding-left: 19px;                                                     
+    padding-right: 19px;
+}
+
+
+
