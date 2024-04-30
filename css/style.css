@@ -315,3 +315,39 @@ en recadrant les bords supérieur et inférieur */
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
+/****** Activités ******/
+.activites {
+    background: #FFFFFF;
+    padding: 30px;
+}
+
+.activites-cards .card {
+    /* width: 29.75% ;*/
+    width: 297.5px;
+    height: 439px;
+    display: flex; flex-direction: column; justify-content: center;
+    box-sizing: border-box; 
+    padding: 0px;
+    /* border-radius: 20px; deja dans card*/
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 380px;
+    border: none;
+    border-radius: 20px 20px 0px 0px;                                       /* top left et top right*/
+}
+
+.activites-cards .card-content {
+    /* padding: 20px 19px 20px 19px; */
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.activites-cards .card-title {
+    /* même font size et taille de card-title de la page */
+    width: 259.5px;
+    
+}
