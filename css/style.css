@@ -24,138 +24,197 @@ body {
     padding: 0 50px;
     box-sizing: border-box;
 }
+
+
 /*** Header ***/ 
-.header-nav {display: flex; justify-content: space-between; 
-            height: 79px; 
-            margin-bottom: 30px;
-} 
+.header-nav {
+    display: flex; justify-content: space-between; 
+    height: 79px; 
+    margin-bottom: 30px;
+
 /* un conteneur flexbox horizontal avec logo et nav distribués de manière égale et espacée, 
 tout avec hauteur 79px , espace entre header et intro de 30px*/ 
+} 
 
 
-.logo-cadre {width: 161.09px; 
-            gap: 10px; 
-            padding: 30px 0px; }      
+.logo-box {
+    width: 161.09px; 
+    gap: 10px; 
+    padding: 30px 0px;     
                                                         /* largeur 161 px, espacement interne 10px, 
                                                         un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
+}  
 
-.logo-booki {width: 61.09px; height: 19px;}             /* largeur de 61,09px et hauteur de 19px */
+.logo-booki {
+    width: 61.09px; 
+    height: 19px;                                       /* largeur de 61,09px et hauteur de 19px */
+}
 
 
-.nav-list-container{ display: flex ; 
-                    justify-content: space-between; 
-                    margin-top: -7px; 
-}                                                       /* remonter le conteneur de Nav par rapport à sa position initiale */
+.nav-list-container{ 
+    display: flex ; 
+    justify-content: space-between; 
+    margin-top: -7px;                                   /* remonter le conteneur de Nav par rapport à sa position initiale */
+                                                      
+} 
 
-.nav-list { display:flex; 
-            list-style-type: none; 
-            width: 244px; height: 35px; 
-            gap: 68px;}                                 /* gap : Espace entre les éléments */
+.nav-list { 
+    display:flex; 
+    list-style-type: none; 
+    width: 244px; height: 35px; 
+    gap: 68px;                                         /* gap : Espace entre les éléments */
+}
 
-.nav-list li :hover { width:20px; 
-                      color: #0065FC; 
-                      border-top: 3px solid #0065FC; 
-                      padding-top: 15px;} 
+.nav-list li :hover { 
+    width:20px; 
+    color: #0065FC; 
+    border-top: 3px solid #0065FC;                    /* border-top en version desktop --- border-bottom en version Mobile */
+    padding-top: 15px;                                  /* padding-top : un rembourrage de 15px en haut */
                                                         /* Hover: ajouter de l'interactivité en bleu au survol de la souris */
-                                                        /* border-top en version desktop --- border-bottom en version Mobile */
-                                                        /* padding-top : un rembourrage de 15px en haut */
+                                                        
+                                                        
+} 
+
+
 
 /*** intro de la page ***/
-.intro-page {display: flex; 
-            flex-direction: column; }                   /* h2 et p seront disposés verticalement */
+.intro-page {
+    display: flex; 
+    flex-direction: column;                             /* h2 et p seront disposés verticalement */
+}
 
-p { margin-top: 8px; }                                  /* l'espace en haut entre p et h2  */ 
+p { 
+    margin-top: 8px;}                                   /* l'espace en haut entre p et h2  */ 
+                                  
+
 
 
 /*** Recherche ***/
-.search-form {  display: flex; align-items: center; 
-                height: 49px; } 
+.search-form {  
+    display: flex; align-items: center; 
+    height: 49px; } 
 
-.search-bar {display: flex; flex-direction: row;        /*disposés horizontalement dans la même ligne*/
-             height: 49px; }                            /* + width: 377px; rendre box icone plus petite & gap: 24px; barre plus large*/
+
+.search-bar {
+    display: flex; flex-direction: row;                 
+    height: 49px; 
+
+/* disposés horizontalement dans la même ligne */
+/* + width: 377px; rendre box icone plus petite & gap: 24px; barre plus large*/  }                                  
+ 
 
 /* icon localisation */
-.icon-box { height: 49px ; width: 50px;  
-            background-color: #F2F2F2; 
-            border-radius: 15px 0px 0px 15px;}
+.icon-box { 
+    height: 49px ; width: 50px;  
+    background-color: #F2F2F2; 
+    border-radius: 15px 0px 0px 15px;}
 
-i.fa-solid.fa-location-dot { height: 18px; width: 14px; 
-                            margin-top: 15px; margin-left: 18px; 
-                            color: #000000;}
+i.fa-solid.fa-location-dot { 
+    height: 18px; width: 14px; 
+    margin-top: 15px; margin-left: 18px; 
+    color: #000000;}
 
 
 /* input */
-.search-city { width: fit-content; }                    /* Ajuster la largeur au contenu */
+.search-city { 
+    width: fit-content; 
+/* Ajuster la largeur au contenu */ }                                
 
-.search-city input { height: 45px;
-                    font-weight: 700; font-size: 18px; line-height: 21.13px;
-                    border :none; outline: none; 
-                    border-top: #F2F2F2 solid 1px;
-                    border-bottom: #F2F2F2 solid 1px;
-                    text-align: center;} 
+.search-city input { 
+    height: 45px;
+    font-weight: 700; font-size: 18px; line-height: 21.13px;
+    border :none; outline: none; 
+    border-top: #F2F2F2 solid 1px;
+    border-bottom: #F2F2F2 solid 1px;
+    text-align: center;} 
+
 
 /* Bouton de recherche  */
-.search {   height: 49px; width: 132px; 
-            background-color: #0065FC; 
-            color:#FFFFFF; font-size: 18px; line-height: 21.13px; font-weight: 700;
-            border: 1px #0065FC; border-radius: 0px 15px 15px 0px; }
+.search {   
+    height: 49px; width: 132px; 
+    background-color: #0065FC; 
+    color:#FFFFFF; font-size: 18px; line-height: 21.13px; font-weight: 700;
+    border: 1px #0065FC; border-radius: 0px 15px 15px 0px; }
 
 .search-mobile {
     height: 49px; width: 49px; 
     border: 1px solid #0065FC ; border-radius: 15px;
     padding: 15px 16px; 
     background: #0065FC;
-    display: none;                      /* Masquer le bouton */
-    /* display: inline-block; */        /* Afficher le bouton */
+    display: none;                                      /* Masquer le bouton */
+    /* display: inline-block; */                        /* Afficher le bouton */
 }
 
 /* icône Loupe */
-i.fa-solid.fa-magnifying-glass{ color: #FFFFFF;
-                                height: 17px; width: 17px; }
+i.fa-solid.fa-magnifying-glass{
+     color: #FFFFFF;
+    height: 17px; width: 17px; }
                                 
 
+
 /*** filter ***/
-.filter-bar {   display: flex;
-                height: 50px;
-                gap: 15px; }                                    /* hauteur 50px, espace entre les elements 15px, centrer tout */
+.filter-bar {   
+    display: flex;
+    height: 50px;
+    gap: 15px; 
 
-.filter-bar h2 {font-size: 18px;}                               /* size de h2 */
+    /* hauteur 50px, espace entre les elements 15px, centrer tout */ }                                                
 
-.filter-container { display: flex;
-                    gap: 15px;}
+.filter-bar h2 {
+    font-size: 18px;
+    /* size de h2 */ }                                            
 
-.filter {   display: flex; align-items: baseline;
-            gap: 10px;
-            border: #D9D9D9 solid 2px; border-radius: 25px;
-            padding: 4px 19px 4px 19px; 
-}                                                               /* gap 10px espace entre icône et txt, 
-                                                                baseline : aligne les éléments flexibles en utilisant leur ligne de base comme référence*/ 
+.filter-container { 
+    display: flex;
+    gap: 15px;}
 
-.filter p { font-size: 18px; 
-            font-weight: 700;
-}                                                               /* font-weight : txt en gras */
+.filter {   
+    display: flex; align-items: baseline;
+    gap: 10px;
+    border: #D9D9D9 solid 2px; border-radius: 25px;
+    padding: 4px 19px 4px 19px; 
 
-.filter-container :hover {background-color: #DEEBFF;}     
+    /* gap 10px espace entre icône et txt */
+    /* baseline : aligne les éléments flexibles en utilisant leur ligne de base comme référence*/ }
+
+.filter p { 
+    font-size: 18px; 
+    font-weight: 700; 
+
+    /* font-weight : txt en gras */ }                                         
+                                                              
+.filter-container :hover {
+    background-color: #DEEBFF;}     
+
 
 
 /*** Info Bar ****/
-.info-bar { display: flex; align-items: baseline;
-            gap: 10px; 
-            margin-bottom: 35px;
-        }                                                       /* assure que l'icône et le txt de .info-bar soient alignés de manière Cohérent, 
-                                                                   en fonction de leur ligne de base respective */
-                                                                /* gap 10px entre icone et txt, margin-bottom: espace entre info bar et main */
-    /* icône info */
+.info-bar { 
+    display: flex; align-items: baseline;
+    gap: 10px; 
+    margin-bottom: 35px;
+    
+    /* assure que l'icône et le txt de .info-bar soient alignés de manière Cohérent, 
+    en fonction de leur ligne de base respective */
+   /* gap 10px entre icone et txt */
+   /* margin-bottom: espace entre info bar et main */   } 
+   
+
+/* icône info */
 i.fa-solid.fa-info { 
-            border: 1px solid #D9D9D9; border-radius: 50%;
-            text-align: center;
-            width: 16px;  padding: 8px;  }                      /* width 16px assure que l'icône a une taille fixe, c utile pour 
-                                                                   maintenir une cohérence visuelle avec d'autres éléments de la page */
-                                                                /* padding 8px ajoute un espace autour de l'icône, la rendant plus visible */ 
+    border: 1px solid #D9D9D9; border-radius: 50%;
+    text-align: center;
+    width: 16px;  padding: 8px;                        
+            
+    /* l'icône a une taille fixe de l'icône 16px, c utile pour 
+    maintenir une cohérence visuelle avec d'autres éléments de la page */
+    /* padding 8px ajoute un espace autour de l'icône, la rendant plus visible */ }
 
 
-.intro-page, .search-form, .filter-bar { margin-bottom: 35px;}   /* dans la maquette gap 35px -> espace entre les elements verticalement */
+.intro-page, .search-form, .filter-bar { 
+    margin-bottom: 35px;   
 
+    /* dans la maquette gap 35px -> espace entre les elements verticalement */ }
 
 a {
     color: inherit;
@@ -171,58 +230,59 @@ a {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));}
-    /* une ombre qui suit la forme de l'élément, y compris les zones transparentes */
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    /* une ombre qui suit la forme de l'élément, y compris les zones transparentes */  }
 
     /* box-shadow: 0px 3px 15px 0px #0000001A; 
        pour ajouter une ombre rectangulaire autour de l'élément */
 
-
 .card img {
-    object-fit: cover;                                                      
-}
-/* assurer que img remplisse l'intégralité du conteneur tout
-en recadrant les bords supérieur et inférieur */
+    object-fit: cover;   
+    
+    /* assurer que img remplisse l'intégralité du conteneur tout
+    en recadrant les bords supérieur et inférieur */   }
+
 
 .card-title {
-    font-size: 16px;
-}
+    font-size: 16px; }
+
 
 .euro {
-    font-weight: 700;
-}
+    font-weight: 700; }
+
 
 .neutral-star {
-    color: var(--main-bg-color)
-}
+    color: var(--main-bg-color) }
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
-}
+    justify-content: space-between; }
+
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
-}
+    box-sizing: border-box;  }
 
-/****** Hebergements ***********/
+
+/****** Hebergements *****/
 .hebergements {
-    width: 65%;
-}
+    width: 65%; }
+
 
     /* image */
 .hebergements-cards img {
-    width: 100%; /* width: 250.33px;  */
+    width: 100%; 
     height: 124px;
     border: 5px solid #ffffff; 
     border-radius: 20px 20px 0px 0px;
 
-    /* laisser .card img{ object-fit: cover;} pour que l’image ne sera pas déformée*/
-}
+    /* width: 250.33px; */
+    /* j'ai laissé .card img{ object-fit: cover;} pour que l’image ne sera pas déformée */  }
+
 
     /* La carte */
 .hebergements .card{
@@ -233,7 +293,7 @@ en recadrant les bords supérieur et inférieur */
     display: flex; flex-wrap: wrap;
     box-sizing: border-box;                                          /* simplifier La taille d'élement - inclut auto la bordure et padding */
     box-shadow: 0px 3px 15px 0px #0000001A;                        /* ombre portée sur la carte, Décalage horizontal 0 px 
-                                                                     verticale 3px, flou 15px, étalement 0px , couleur noir avec une opacité 10% */
+                                                                        verticale 3px, flou 15px, étalement 0px , couleur noir avec une opacité 10% */
     
 }
 
@@ -243,34 +303,41 @@ en recadrant les bords supérieur et inférieur */
     height: 64.25px; 
     padding: 0px 15px 0px 15px;                                      /* padding left et right */                                                            
     display: flex; flex-direction: column;                           /* flexbox - les cartes verticales avec un espace égale */
-    justify-content: space-between;   
-}
+    justify-content: space-between;   }
+
 
     /* Espace entre les éléments de contenu de la carte */
 .hebergements .card-title { 
-    margin-top: 0px;                                                 /* coller l'élément en haut */
-    margin-bottom: 4px; }                                            /* car espace entre les éléments est 4px = gap */ 
+    margin-top: 0px;                                                 
+    margin-bottom: 4px; 
+
+    /* margin top 0px pour coller l'élément en haut */
+    /* margin-bottom 4px car l'espace entre les éléments est 4px = gap */   }
                                                    
 
 .hebergements .card-subtitle {
-    margin: 0px; }                                                  /* le margin top de p de card-subtitle basé sur le p de la page */
+    margin: 0px; 
+    /* le margin top de p de card-subtitle basé sur le p de la page */   }  
+
 
 .hebergements .card-rating {  
     margin-top: 4px; }                    
+
 
 /* la liste des cartes hebergements */
 .hebergements .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;                                   /* espaces égaux entre les cartes*/
-}
+    justify-content: space-between;   
+    /* espaces égaux entre les cartes*/   }                             
+
 
 /*** Afficher plus ***/
 .afficher-plus h3 {
     font-size: 18px;
     font-weight: 700;
     margin-top: 30px;                                               /* espace entre list card et afficher plus*/
-    margin-bottom: 0px;                                             /* coller en bas  comme la maquette */
+    margin-bottom: 0px;                                             /* coller en bas comme la maquette */
 }
 
 
@@ -361,6 +428,36 @@ en recadrant les bords supérieur et inférieur */
     padding-left: 19px;                                                     
     padding-right: 19px;
 }
+
+
+/***** Footer ******/
+ footer {
+    display: flex; flex-direction: row; 
+    justify-content: space-between; 
+    background: #F2F2F2;
+    padding: 20px;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    width: 33%; 
+
+    /* pourcentage = (446px/1340px)*100= 33% */
+    /* Diviser la largeur de footer-link 446px par la largeur footer (élément parent) 1340px 
+       et puis multiplier le résultat par 100 pour obtenir le pourcentage */
+    
+}
+
+.footer-link h3 {
+    font-size: 18px;
+    margin: 0px;
+}
+
+.footer-link a {
+    padding-top: 15px;
+}
+
 
 
 
