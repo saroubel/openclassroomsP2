@@ -31,6 +31,7 @@ body {
     display: flex; justify-content: space-between; 
     height: 79px; 
     margin-bottom: 30px;
+    width: 100%;
 
 /* un conteneur flexbox horizontal avec logo et nav distribués de manière égale et espacée, 
 tout avec hauteur 79px , espace entre header et intro de 30px*/ 
@@ -41,13 +42,17 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
     width: 161.09px; 
     gap: 10px; 
     padding: 30px 0px;     
-                                                        /* largeur 161 px, espacement interne 10px, 
-                                                        un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
+    
+    /* largeur 161 px 
+    l'espacement interne 10px, 
+    un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
 }  
 
 .logo-booki {
-    width: 61.09px; 
-    height: 19px;                                       /* largeur de 61,09px et hauteur de 19px */
+    width: 38%; 
+    height: 19px;                                       
+    
+    /* largeur de 61,09px = (161px/61px)*100 = 38%  */
 }
 
 
@@ -55,24 +60,22 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
     display: flex ; 
     justify-content: space-between; 
     margin-top: -7px;                                   /* remonter le conteneur de Nav par rapport à sa position initiale */
-                                                      
 } 
 
 .nav-list { 
+    height: 35px; 
+    width: 100%;                                       /* width: 244px;  */
     display:flex; 
     list-style-type: none; 
-    width: 244px; height: 35px; 
     gap: 68px;                                         /* gap : Espace entre les éléments */
-}
+    }
 
 .nav-list li :hover { 
     width:20px; 
     color: #0065FC; 
     border-top: 3px solid #0065FC;                    /* border-top en version desktop --- border-bottom en version Mobile */
     padding-top: 15px;                                  /* padding-top : un rembourrage de 15px en haut */
-                                                        /* Hover: ajouter de l'interactivité en bleu au survol de la souris */
-                                                        
-                                                        
+                                                        /* Hover: ajouter de l'interactivité en bleu au survol de la souris */                                                     
 } 
 
 
@@ -80,11 +83,12 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
 /*** intro de la page ***/
 .intro-page {
     display: flex; 
-    flex-direction: column;                             /* h2 et p seront disposés verticalement */
-}
+    flex-direction: column;                             
+    /* h2 et p seront disposés verticalement */  }
 
 p { 
-    margin-top: 8px;}                                   /* l'espace en haut entre p et h2  */ 
+    margin-top: 8px;
+    /* l'espace en haut entre p et h2  */ }                                    
                                   
 
 
@@ -118,7 +122,7 @@ i.fa-solid.fa-location-dot {
 /* input */
 .search-city { 
     width: fit-content; 
-/* Ajuster la largeur au contenu */ }                                
+/*  pour ajuster la largeur au contenu */ }                                
 
 .search-city input { 
     height: 45px;
@@ -181,7 +185,7 @@ i.fa-solid.fa-magnifying-glass{
     font-size: 18px; 
     font-weight: 700; 
 
-    /* font-weight : txt en gras */ }                                         
+    /* font-weight : txt en gras (bold) */ }                                         
                                                               
 .filter-container :hover {
     background-color: #DEEBFF;}     
@@ -286,7 +290,8 @@ a {
 
     /* La carte */
 .hebergements .card{
-    width: 250.33px;  height: 207.25px;
+    width: 250.33px;  
+    height: 207.25px;
     margin-top: 33px;                                                /* pareil comme populaires - espace entre titre et card */ 
     padding: 0px 0px 15px 0px;                                       /* padding-bottom est 15px*/
     border-radius: 20px;
@@ -296,10 +301,14 @@ a {
                                                                         verticale 3px, flou 15px, étalement 0px , couleur noir avec une opacité 10% */
     
 }
+/* .hebergements-cards a { width: 29% ;}  */
+/* la carte sera pas comme la maquette  
+    width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
+
 
     /* Le contenu de la carte */
 .hebergements-cards .card-content {
-    width: 100%;                                                     /* width: 250.33px; */
+    width: 100%;                                                     /* width: 250.33px; = (cardcontent 250px/card250)*100 = 100%   */
     height: 64.25px; 
     padding: 0px 15px 0px 15px;                                      /* padding left et right */                                                            
     display: flex; flex-direction: column;                           /* flexbox - les cartes verticales avec un espace égale */
@@ -390,14 +399,20 @@ a {
 /****** Activités ******/
 .activites {
     background: #FFFFFF;
-    padding: 30px;                                                          /* padding de conteneur activités*/
-    margin-top: 30px;                                                       /* pour le conteneur activités */
-    margin-bottom: 30px;                                                    /* pour qu'il soit pas coller en haut avec hebergements-populaires et en bas avec footer */
+    padding: 30px;                                              /* padding de conteneur activités*/
+    margin-top: 30px;                                           /* pour le conteneur activités */
+    margin-bottom: 30px;                                        /* pour qu'il soit pas coller en haut avec hebergements-populaires et en bas avec footer */
 }
 
 .activites .section-title { 
-    margin-bottom: 30px;}                                                  /* Espace entre titre et carte - le gap au milieu de conteneur est 30px*/
-                     
+    margin-bottom: 30px;                            
+    /* Espace entre titre et carte - le gap au milieu de conteneur est 30px*/
+    
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}       
+
 /* Flexbox pour la liste des cartes activités */
 .activites-cards { 
     display: flex;
@@ -405,12 +420,13 @@ a {
     flex-direction: row;
 } 
 
-.activites-cards .card {
-    width: 297.5px;          
-    padding: 0px;                                            
+.activites-cards .card {         
+    display: flex; flex-direction: column;                                 /* le contenu de la carte soit verticalement */                                       
     box-shadow: 0px 3px 15px 0px #0000001A;                              /* ombre portée sur la carte */
-    display: flex; flex-direction: column; justify-content: center;        /* le contenu de la carte soit verticalement et centré */
-    /* height: 50%; */                                                     /* La moitié supérieure de la carte est occupée par img */
+    padding: 0px;     
+    width: 297.5px;  
+    /* width: 23% ;  ça marche pas !  
+       (297px/1280px)*100 = 23%     */
 }
 
 .activites-cards img {
@@ -419,8 +435,9 @@ a {
     border: none;
     border-radius: 20px 20px 0px 0px;      
 
+    /* width 100% : image remplisse la largeur de la carte   ou Width : 297.5px;  */
     /* border radius top left et top right */ 
-    /* Width : 297.5px; ou  100% : image remplisse la largeur de la carte */
+    
     /* laisser .card img{ object-fit: cover;} pour que l’image ne sera pas déformée*/
 }
 
@@ -452,12 +469,21 @@ a {
 .footer-link h3 {
     font-size: 18px;
     margin: 0px;
+    width: fit-content;
+
+   /* fit-content : pour ne pas dépasser la largeur de contenu, s'assurer que les cliques se font uniquement sur le txt du lien <a> , 
+    en évitant de ne pas cliquer sur les espaces vide autour */
 }
 
 .footer-link a {
     padding-top: 15px;
+    width: fit-content;
 }
 
+.footer-link a:hover {
+    color: #0065FC;
+
+    /* la couleur du lien en bleu au survol */ }
 
 
 
