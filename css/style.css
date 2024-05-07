@@ -235,10 +235,17 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    /* une ombre qui suit la forme de l'élément, y compris les zones transparentes */  }
+    transition: transform 0.3s ease-in-out; 
 
-    /* box-shadow: 0px 3px 15px 0px #0000001A; 
-       pour ajouter une ombre rectangulaire autour de l'élément */
+    /* Drop shadow : une ombre qui suit la forme de l'élément, y compris les zones transparentes */ 
+    /* Transition : pour l'animation,'transform' Pour créer l'effet de zoom */
+}
+
+.card:hover {
+    transform: scale(1.1); 
+
+    /* Agrandir la carte de 10% au survol */ }
+
 
 .card img {
     object-fit: cover;   
@@ -297,13 +304,15 @@ a {
     border-radius: 20px;
     display: flex; flex-wrap: wrap;
     box-sizing: border-box;                                          /* simplifier La taille d'élement - inclut auto la bordure et padding */
-    box-shadow: 0px 3px 15px 0px #0000001A;                        /* ombre portée sur la carte, Décalage horizontal 0 px 
-                                                                        verticale 3px, flou 15px, étalement 0px , couleur noir avec une opacité 10% */
+    box-shadow: 0px 3px 15px 0px #0000001A;                       /* ombre portée sur la carte, ombre rectangulaire autour de l'élément, 
+                                                                        Décalage horizontal 0 px verticale 3px, flou 15px, étalement 0px,
+                                                                        couleur noir avec une opacité 10% */
     
-}
+    }  
+
 /* .hebergements-cards a { width: 29% ;}  */
-/* la carte sera pas comme la maquette  
-    width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
+    /* si on changera largeur en % , conteneur des cartes sera pas comme la maquette  
+       width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
 
 
     /* Le contenu de la carte */
@@ -424,10 +433,8 @@ a {
     display: flex; flex-direction: column;                                 /* le contenu de la carte soit verticalement */                                       
     box-shadow: 0px 3px 15px 0px #0000001A;                              /* ombre portée sur la carte */
     padding: 0px;     
-    width: 297.5px;  
-    /* width: 23% ;  ça marche pas !  
-       (297px/1280px)*100 = 23%     */
-}
+    width: 297.5px;   }
+  
 
 .activites-cards img {
     width: 100%;                                                            
