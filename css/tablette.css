@@ -2,6 +2,21 @@
 /* medium devices */
 @media (min-width : 768px ) and (max-width : 1024px ) { 
 
+    /* Filtres */
+    .filter-bar {   
+        display: flex;
+        flex-direction: column;
+        height: 91px;
+        padding-bottom: 30px; 
+    
+        /* flex-direction: column; pour empiler  (le  h2 "Filtres" et le conteneur des filtres) verticalement */ 
+
+        /* L'utilisation de padding-bottom plutôt que margin-bottom pour obtenir un espacement interne plus fiable entre les éléments,
+           contrairement au margin qui peut créer des espaces irréguliers entre les éléments  */ 
+        }  
+    
+    /* .filter-container { justify-content: space-between;  gap: 0px; } */
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
