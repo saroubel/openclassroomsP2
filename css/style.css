@@ -16,6 +16,8 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0 auto; 
+    /* mettre 0 sur margin car sur google chrome ajoute 8px par défaut */
 }
 
 .main-container {
@@ -59,7 +61,6 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
 .nav-list-container{ 
     display: flex ; 
     justify-content: space-between; 
-    margin-top: -7px;                                   /* remonter le conteneur de Nav par rapport à sa position initiale */
 } 
 
 .nav-list { 
@@ -74,7 +75,7 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
     width:20px; 
     color: #0065FC; 
     border-top: 3px solid #0065FC;                    /* border-top en version desktop --- border-bottom en version Mobile */
-    padding-top: 15px;                                  /* padding-top : un rembourrage de 15px en haut */
+    padding-top: 14px;                                  /* padding-top : un rembourrage de 15px en haut */
                                                         /* Hover: ajouter de l'interactivité en bleu au survol de la souris */                                                     
 } 
 
@@ -434,11 +435,19 @@ a {
     flex-direction: row;
 } 
 
+.activites-cards a {
+    width: 23%;
+    
+    /* (carte activité 297px/ conteneur carte 1280px) * 100 = 23%  */
+}
+
 .activites-cards .card {         
     display: flex; flex-direction: column;                                 /* le contenu de la carte soit verticalement */                                       
     box-shadow: 0px 3px 15px 0px #0000001A;                              /* ombre portée sur la carte */
-    padding: 0px;     
-    width: 297.5px;   }
+    padding: 0px; 
+    height: 439px; 
+    width: 100%;  /* width: 297.5px; */
+ }
   
 
 .activites-cards img {
@@ -454,8 +463,8 @@ a {
 }
 
 .activites-cards .card-content {
-    padding-left: 19px;                                                     
-    padding-right: 19px;
+    padding-left: 19px;  
+    height: 59px;  /*fixed*/                                              
 }
 
 
