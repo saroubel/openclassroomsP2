@@ -61,4 +61,17 @@ body {
 /*** Populaires ***/
 /*** Hébergements ***/
 
+
+
+/*** Activités ***/
+.activites {
+    display: flex;
+    flex-direction: column;
+}
+
+.activites-cards {
+    display: flex;
+    flex-direction: column;
+}
+
 }
