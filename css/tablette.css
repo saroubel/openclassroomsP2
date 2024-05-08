@@ -49,4 +49,16 @@
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+
+    /* Activités */
+    .activites-cards .card {
+        width: 193.5px;
+        height: 270px; }
+    
+
+    .activites-cards img {
+        height: 200px; }
+        
+    
 }
