@@ -51,4 +51,14 @@ body {
     row-gap: 20px;
  }
 
+
+ /*** Hébergements & populaires ***/
+.hebergements-and-populaires {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/*** Populaires ***/
+/*** Hébergements ***/
+
 }
