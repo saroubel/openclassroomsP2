@@ -170,7 +170,8 @@ i.fa-solid.fa-magnifying-glass{
 
 .filter-container { 
     display: flex;
-    gap: 15px;}
+    gap: 15px;
+    height: 50px;}
 
 .filter {   
     display: flex; align-items: baseline;
@@ -288,11 +289,16 @@ a {
 .hebergements-cards img {
     width: 100%; 
     height: 124px;
+    object-fit: cover;
     border: 5px solid #ffffff; 
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0px 0px; 
+    box-sizing: border-box;   
 
-    /* width: 250.33px; */
-    /* j'ai laissé .card img{ object-fit: cover;} pour que l’image ne sera pas déformée */  }
+    /* width 100% : image remplisse la largeur de la carte */
+    /* object-fit : cover; pour que l’image ne sera pas déformée */ 
+    /* border radius top left & right */
+    /* box-sizing : border-box;  simplifier La taille d'élement - inclut auto la bordure et padding */
+    }
 
 
     /* La carte */
@@ -300,18 +306,17 @@ a {
     width: 250.33px;  
     height: 207.25px;
     margin-top: 33px;                                                /* pareil comme populaires - espace entre titre et card */ 
-    padding: 0px 0px 15px 0px;                                       /* padding-bottom est 15px*/
+    padding: 0px;                                    
     border-radius: 20px;
-    display: flex; flex-wrap: wrap;
-    box-sizing: border-box;                                          /* simplifier La taille d'élement - inclut auto la bordure et padding */
+    display: flex; flex-wrap: wrap;                                      
     box-shadow: 0px 3px 15px 0px #0000001A;                       /* ombre portée sur la carte, ombre rectangulaire autour de l'élément, 
                                                                         Décalage horizontal 0 px verticale 3px, flou 15px, étalement 0px,
                                                                         couleur noir avec une opacité 10% */
-    
     }  
 
 /* .hebergements-cards a { width: 29% ;}  */
-    /* si on changera largeur en % , conteneur des cartes sera pas comme la maquette  
+    /* Enlever largeur de .hebergements .card et remplacer par .hebergements-cards a */
+    /* si on changera largeur en % , le conteneur des cartes sera pas comme la maquette  
        width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
 
 
@@ -440,11 +445,11 @@ a {
     width: 100%;                                                            
     height: 380px;
     border: none;
-    border-radius: 20px 20px 0px 0px;      
+    border-radius: 20px 20px 0px 0px;     
+    object-fit: cover; 
 
     /* width 100% : image remplisse la largeur de la carte   ou Width : 297.5px;  */
     /* border radius top left et top right */ 
-    
     /* laisser .card img{ object-fit: cover;} pour que l’image ne sera pas déformée*/
 }
 

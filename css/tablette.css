@@ -1,15 +1,17 @@
 /*** media queries ***/
 /* medium devices */
 @media (min-width : 768px ) and (max-width : 1024px ) { 
-    
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
+    /* Hébergements */
     .hebergements {
         width: 100%;
     }
 
+    /* Populaires */
     .populaires {
         width: 100%;
         margin-top: 50px;
