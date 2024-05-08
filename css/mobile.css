@@ -13,11 +13,42 @@ body {
 /* padding: 0px 20px 0px 20px; */
 
 
+
 /*** Header ***/
 .header-nav {
     display:flex;
     flex-direction: column; 
     height: fit-content;
 }
+
+
+
+/*** Recherche ***/
+.search-mobile {
+    display: inline-block;  /* Afficher le bouton */
+}
+
+.search {   
+    display: none;  /* Masquer le bouton */
+}
+
+
+
+/*** Filter ***/
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px; 
+    height: fit-content;
+    max-width: initial;
+}
+
+.filter-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+ }
 
 }
