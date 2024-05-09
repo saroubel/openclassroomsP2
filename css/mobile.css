@@ -21,6 +21,13 @@ body {
     height: fit-content;
 }
 
+.nav-list {    
+    display: flex;
+    justify-content: space-between; /**/
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 
 
 /*** Recherche ***/

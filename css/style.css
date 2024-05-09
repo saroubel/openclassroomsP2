@@ -219,7 +219,7 @@ i.fa-solid.fa-info {
 
 .intro-page, .search-form, .filter-bar { 
     margin-bottom: 35px;   
-
+    
     /* dans la maquette gap 35px -> espace entre les elements verticalement */ }
 
 a {
@@ -280,6 +280,12 @@ a {
     padding: 30px;
     box-sizing: border-box;  }
 
+.hebergements-and-populaires .card-title, .card-subtitle {
+        font-size: clamp(12px, 1.2vw, 16px); }
+        /* clamp avec 3 argumens max et min et valeur de réference 1.2vw=1.2% de largeur de la fenêtre d'affichage (viewport) */
+        /* Pour ne pas définir plusieurs font-size de différentes tailles d'écran, avec cette technique aa taille s'adapte de façon continue*/
+
+
 
 /****** Hebergements *****/
 .hebergements {
@@ -304,7 +310,6 @@ a {
 
     /* La carte */
 .hebergements .card{
-    width: 250.33px;  
     height: 207.25px;
     margin-top: 33px;                                                /* pareil comme populaires - espace entre titre et card */ 
     padding: 0px;                                    
@@ -315,10 +320,9 @@ a {
                                                                         couleur noir avec une opacité 10% */
     }  
 
-/* .hebergements-cards a { width: 29% ;}  */
-    /* Enlever largeur de .hebergements .card et remplacer par .hebergements-cards a */
-    /* si on changera largeur en % , le conteneur des cartes sera pas comme la maquette  
-       width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
+.hebergements-cards a { 
+    width: 30% ;
+}  /* largeur en %  width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
 
 
     /* Le contenu de la carte */
