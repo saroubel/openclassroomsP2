@@ -7,10 +7,10 @@ body {
     max-width: 767.98px;
     min-width: 320px ; }
 
-/* * { margin:0px; } */
+* { margin:0px; }
 
-.main-container { padding: 0px;}
-/* padding: 0px 20px 0px 20px; */
+.main-container { 
+    padding: 0px 20px 0px 20px; }
 
 
 

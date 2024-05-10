@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto; 
-    /* mettre 0 sur margin car sur google chrome ajoute 8px par défaut */
+    /* Mettre 0 sur margin car sur les éléments HTML dans google chrome ajoute 8px par défaut */
 }
 
 .main-container {
@@ -159,20 +159,25 @@ i.fa-solid.fa-magnifying-glass{
 
 /*** filter ***/
 .filter-bar {   
-    display: flex;
+    max-width: 758px;
     height: 50px;
+    display: flex; align-items: center;
     gap: 15px; 
 
-    /* hauteur 50px, espace entre les elements 15px, centrer tout */ }                                                
+    /* largeur max pour s'adapter aux dif écrans, pour éviter qu'il ne devienne trop large, 
+       hauteur 50px, espace entre les elements 15px, centrer tout */ }                                                
 
 .filter-bar h2 {
     font-size: 18px;
     /* size de h2 */ }                                            
 
 .filter-container { 
-    display: flex;
-    gap: 15px;
-    height: 50px;}
+    width: 100%;
+    height: 50px;
+    display: flex; justify-content: space-between; 
+
+    /* largeur 100% Occupe toute la largeur dispo dans la barre de filtres (conteneur parent)*/
+    /* flex pour aligner les éléments de manière espacée horizontalement */   }
 
 .filter {   
     display: flex; align-items: baseline;
@@ -188,7 +193,7 @@ i.fa-solid.fa-magnifying-glass{
     font-weight: 700; 
 
     /* font-weight : txt en gras (bold) */ }                                         
-                                                              
+              
 .filter-container :hover {
     background-color: #DEEBFF;}     
 
@@ -201,9 +206,9 @@ i.fa-solid.fa-magnifying-glass{
     margin-bottom: 35px;
     
     /* assure que l'icône et le txt de .info-bar soient alignés de manière Cohérent, 
-    en fonction de leur ligne de base respective */
-   /* gap 10px entre icone et txt */
-   /* margin-bottom: espace entre info bar et main */   } 
+      en fonction de leur ligne de base respective */
+    /* gap 10px entre icone et txt */
+    /* margin-bottom: espace entre info bar et main */   } 
    
 
 /* icône info */
@@ -219,7 +224,7 @@ i.fa-solid.fa-info {
 
 .intro-page, .search-form, .filter-bar { 
     margin-bottom: 35px;   
-    
+
     /* dans la maquette gap 35px -> espace entre les elements verticalement */ }
 
 a {
