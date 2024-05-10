@@ -41,20 +41,15 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
 
 
 .logo-box {
-    width: 161.09px; 
-    gap: 10px; 
-    padding: 30px 0px;     
+    padding: 30px 0px; 
+    margin: 30px;  /**/  
     
-    /* largeur 161 px 
-    l'espacement interne 10px, 
-    un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
+    /* un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
 }  
 
 .logo-booki {
-    width: 38%; 
-    height: 19px;                                       
-    
-    /* largeur de 61,09px = (161px/61px)*100 = 38%  */
+    width: 100%; /**/
+    height: 19px;                                     
 }
 
 
@@ -161,8 +156,8 @@ i.fa-solid.fa-magnifying-glass{
 .filter-bar {   
     max-width: 758px;
     height: 50px;
-    display: flex; align-items: center;
     gap: 15px; 
+    display: flex; align-items: center;
 
     /* largeur max pour s'adapter aux dif écrans, pour éviter qu'il ne devienne trop large, 
        hauteur 50px, espace entre les elements 15px, centrer tout */ }                                                
@@ -191,9 +186,11 @@ i.fa-solid.fa-magnifying-glass{
 .filter p { 
     font-size: 18px; 
     font-weight: 700; 
-
     /* font-weight : txt en gras (bold) */ }                                         
-              
+           
+.filter i { 
+    font-size: 22px; }
+
 .filter-container :hover {
     background-color: #DEEBFF;}     
 
