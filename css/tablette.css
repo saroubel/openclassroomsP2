@@ -14,8 +14,9 @@
     /* Filtres */
     .filter-bar {   
         display: block;
-        height: 91px;
+        height: fit-content; 
         
+        /* h:91px; */
         /* active l'affichage en bloc pour empiler ( h2 "Filtres" et le conteneur des filtres) verticalement */
     }  
 
