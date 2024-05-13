@@ -1,15 +1,38 @@
 /*** media queries ***/
 /* medium devices */
 @media (min-width : 768px ) and (max-width : 1024px ) { 
-    
+
+    /* général */
+
+    body {
+        max-width: 1024px;
+        min-width: 768px;
+    }
+
+
+
+    /* Filtres */
+    .filter-bar {   
+        display: block;
+        height: fit-content; 
+        
+        /* h:91px; */
+        /* active l'affichage en bloc pour empiler ( h2 "Filtres" et le conteneur des filtres) verticalement */
+    }  
+
+
+
+    /* hébergements et les plus populaires */
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
+    /* Hébergements */
     .hebergements {
         width: 100%;
     }
 
+    /* Populaires */
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -32,4 +55,14 @@
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+
+    /* Activités */
+    .activites-cards .card {
+        height: 270px; }
+    
+
+    .activites-cards img {
+        height: 200px; }   
+    
 }

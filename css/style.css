@@ -16,6 +16,8 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0 auto; 
+    /* Mettre 0 sur margin car sur les éléments HTML dans google chrome ajoute 8px par défaut */
 }
 
 .main-container {
@@ -34,32 +36,25 @@ body {
     width: 100%;
 
 /* un conteneur flexbox horizontal avec logo et nav distribués de manière égale et espacée, 
-tout avec hauteur 79px , espace entre header et intro de 30px*/ 
+   tout avec hauteur 79px , espace entre header et intro de 30px*/ 
 } 
 
 
 .logo-box {
-    width: 161.09px; 
-    gap: 10px; 
-    padding: 30px 0px;     
-    
-    /* largeur 161 px 
-    l'espacement interne 10px, 
-    un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
+    padding: 30px 0px; 
+
+    /* un rembourrage vertical 30px et horizontal 0 pixel à gauche et à droite */
 }  
 
 .logo-booki {
-    width: 38%; 
-    height: 19px;                                       
-    
-    /* largeur de 61,09px = (161px/61px)*100 = 38%  */
+    width: 100%; /**/
+    height: 19px;                                     
 }
 
 
 .nav-list-container{ 
     display: flex ; 
     justify-content: space-between; 
-    margin-top: -7px;                                   /* remonter le conteneur de Nav par rapport à sa position initiale */
 } 
 
 .nav-list { 
@@ -74,7 +69,7 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
     width:20px; 
     color: #0065FC; 
     border-top: 3px solid #0065FC;                    /* border-top en version desktop --- border-bottom en version Mobile */
-    padding-top: 15px;                                  /* padding-top : un rembourrage de 15px en haut */
+    padding-top: 14px;                                  /* padding-top : un rembourrage de 15px en haut */
                                                         /* Hover: ajouter de l'interactivité en bleu au survol de la souris */                                                     
 } 
 
@@ -88,10 +83,9 @@ tout avec hauteur 79px , espace entre header et intro de 30px*/
 
 p { 
     margin-top: 8px;
+    margin-bottom: 0px;
     /* l'espace en haut entre p et h2  */ }                                    
                                   
-
-
 
 /*** Recherche ***/
 .search-form {  
@@ -158,19 +152,25 @@ i.fa-solid.fa-magnifying-glass{
 
 /*** filter ***/
 .filter-bar {   
-    display: flex;
+    max-width: 758px;
     height: 50px;
     gap: 15px; 
+    display: flex; align-items: center;
 
-    /* hauteur 50px, espace entre les elements 15px, centrer tout */ }                                                
+    /* largeur max pour s'adapter aux dif écrans, pour éviter qu'il ne devienne trop large, 
+       hauteur 50px, espace entre les elements 15px, centrer tout */ }                                                
 
 .filter-bar h2 {
     font-size: 18px;
     /* size de h2 */ }                                            
 
 .filter-container { 
-    display: flex;
-    gap: 15px;}
+    width: 100%;
+    height: 50px;
+    display: flex; justify-content: space-between; 
+
+    /* largeur 100% Occupe toute la largeur dispo dans la barre de filtres (conteneur parent)*/
+    /* flex pour aligner les éléments de manière espacée horizontalement */   }
 
 .filter {   
     display: flex; align-items: baseline;
@@ -184,9 +184,11 @@ i.fa-solid.fa-magnifying-glass{
 .filter p { 
     font-size: 18px; 
     font-weight: 700; 
-
     /* font-weight : txt en gras (bold) */ }                                         
-                                                              
+           
+.filter i { 
+    font-size: 22px; }
+
 .filter-container :hover {
     background-color: #DEEBFF;}     
 
@@ -196,12 +198,11 @@ i.fa-solid.fa-magnifying-glass{
 .info-bar { 
     display: flex; align-items: baseline;
     gap: 10px; 
-    margin-bottom: 35px;
-    
+
     /* assure que l'icône et le txt de .info-bar soient alignés de manière Cohérent, 
-    en fonction de leur ligne de base respective */
-   /* gap 10px entre icone et txt */
-   /* margin-bottom: espace entre info bar et main */   } 
+       en fonction de leur ligne de base respective */
+    /* gap 10px entre icone et txt */
+      } 
    
 
 /* icône info */
@@ -211,14 +212,16 @@ i.fa-solid.fa-info {
     width: 16px;  padding: 8px;                        
             
     /* l'icône a une taille fixe de l'icône 16px, c utile pour 
-    maintenir une cohérence visuelle avec d'autres éléments de la page */
+       maintenir une cohérence visuelle avec d'autres éléments de la page */
     /* padding 8px ajoute un espace autour de l'icône, la rendant plus visible */ }
 
 
-.intro-page, .search-form, .filter-bar { 
+.intro-page, .search-form, .filter-bar, .info-bar { 
     margin-bottom: 35px;   
 
-    /* dans la maquette gap 35px -> espace entre les elements verticalement */ }
+    /* dans la maquette gap 35px -> espace en bas entre les élements verticalement 
+       + espace entre info bar et main */ 
+ }
 
 a {
     color: inherit;
@@ -278,6 +281,12 @@ a {
     padding: 30px;
     box-sizing: border-box;  }
 
+.hebergements-and-populaires .card-title, .card-subtitle {
+        font-size: clamp(12px, 1.2vw, 16px); }
+        /* clamp avec 3 argumens max et min et valeur de réference 1.2vw=1.2% de largeur de la fenêtre d'affichage (viewport) */
+        /* Pour ne pas définir plusieurs font-size de différentes tailles d'écran, avec cette technique aa taille s'adapte de façon continue*/
+
+
 
 /****** Hebergements *****/
 .hebergements {
@@ -288,31 +297,33 @@ a {
 .hebergements-cards img {
     width: 100%; 
     height: 124px;
+    object-fit: cover;
     border: 5px solid #ffffff; 
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0px 0px; 
+    box-sizing: border-box;   
 
-    /* width: 250.33px; */
-    /* j'ai laissé .card img{ object-fit: cover;} pour que l’image ne sera pas déformée */  }
+    /* width 100% : image remplisse la largeur de la carte */
+    /* object-fit : cover; pour que l’image ne sera pas déformée */ 
+    /* border radius top left & right */
+    /* box-sizing : border-box;  simplifier La taille d'élement - inclut auto la bordure et padding */
+    }
 
 
     /* La carte */
 .hebergements .card{
-    width: 250.33px;  
     height: 207.25px;
     margin-top: 33px;                                                /* pareil comme populaires - espace entre titre et card */ 
-    padding: 0px 0px 15px 0px;                                       /* padding-bottom est 15px*/
+    padding: 0px;                                    
     border-radius: 20px;
-    display: flex; flex-wrap: wrap;
-    box-sizing: border-box;                                          /* simplifier La taille d'élement - inclut auto la bordure et padding */
+    display: flex; flex-wrap: wrap;                                      
     box-shadow: 0px 3px 15px 0px #0000001A;                       /* ombre portée sur la carte, ombre rectangulaire autour de l'élément, 
                                                                         Décalage horizontal 0 px verticale 3px, flou 15px, étalement 0px,
                                                                         couleur noir avec une opacité 10% */
-    
     }  
 
-/* .hebergements-cards a { width: 29% ;}  */
-    /* si on changera largeur en % , conteneur des cartes sera pas comme la maquette  
-       width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
+.hebergements-cards a { 
+    width: 30% ;
+}  /* largeur en %  width: 250.33px; = (card 250/conteneurcard 871)*100 = 29% */
 
 
     /* Le contenu de la carte */
@@ -429,28 +440,36 @@ a {
     flex-direction: row;
 } 
 
+.activites-cards a {
+    width: 23%;
+    
+    /* (carte activité 297px/ conteneur carte 1280px) * 100 = 23%  */
+}
+
 .activites-cards .card {         
     display: flex; flex-direction: column;                                 /* le contenu de la carte soit verticalement */                                       
     box-shadow: 0px 3px 15px 0px #0000001A;                              /* ombre portée sur la carte */
-    padding: 0px;     
-    width: 297.5px;   }
+    padding: 0px; 
+    height: 439px; 
+    width: 100%;  /* width: 297.5px; */
+ }
   
 
 .activites-cards img {
     width: 100%;                                                            
     height: 380px;
     border: none;
-    border-radius: 20px 20px 0px 0px;      
+    border-radius: 20px 20px 0px 0px;     
+    object-fit: cover; 
 
     /* width 100% : image remplisse la largeur de la carte   ou Width : 297.5px;  */
     /* border radius top left et top right */ 
-    
     /* laisser .card img{ object-fit: cover;} pour que l’image ne sera pas déformée*/
 }
 
 .activites-cards .card-content {
-    padding-left: 19px;                                                     
-    padding-right: 19px;
+    padding-left: 19px;  
+    height: 59px;  /*fixed*/                                              
 }
 
 

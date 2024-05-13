@@ -1,5 +1,165 @@
 /*** media queries ***/
 /* Small devices */
 @media (min-width : 320px ) and (max-width : 767.98px ) { 
-    
+
+
+/*** général ***/
+
+body {
+    max-width: 767.98px;
+    min-width: 320px ; }
+
+
+* { margin:0px; }
+
+
+.main-container { 
+    padding: 0px;
+
+    /* Retirer padding pour se coller aux bords du conteneur principal Utile 
+       pour aligner correctement les sections "Les plus populaires" et "Hébergements" Ainsi que le "footer" */
+    }
+
+
+
+/*** Header ***/
+.header-nav {
+    flex-direction: column; 
+    align-items: center;
+    height: fit-content;   }
+
+
+.logo-box {
+    margin: 30px;}
+
+
+.nav-list {    
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px; }
+
+
+.nav-list li :hover { 
+    min-width:375px; 
+    border-top: none; 
+    border-bottom: 3px solid #0065FC; 
+    padding-bottom: 14px; 
+}
+
+
+/*** Recherche ***/
+.search-form { 
+    justify-content: center; 
+    /* Centré le formulaire de recherche*/ }  
+
+
+.search-mobile {
+    display: inline-block;  
+    /* Afficher le bouton */ }
+
+
+.search {   
+    display: none;  
+    /* Masquer le bouton */ }
+
+
+
+/*** Filter ***/
+.filter-bar {
+    display: flex; flex-direction: column;
+    height: 161px; /* fixe */
+    max-width: initial; }
+
+
+.filter-container { 
+    display: flex;  flex-wrap: wrap; justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+    height: 50px; /*fixe*/ }
+
+
+.filter-bar h2  {
+    align-self: flex-start; 
+  /*s'aligner au côté gauche du conteneur*/ }
+
+
+.filter { 
+    align-items: center; 
+    height: 50px; /*fixe*/
+    width: 48%;
+    box-sizing: border-box; 
+
+    /* 48% = (165px/335px)*100 */
+    /* box-sizing : simplifier La taille d'élement - inclut auto la bordure et padding */ } 
+
+
+.filter p {
+    font-size: clamp(11px, 1vw, 14px); 
+    margin: 0px; 
+    /* Clamp : max et min et valeur de réference 1% de largeur de viewport */
+    /* margin 0 assure qu'il y'aura pas de décalage et soit centré avec aligne-items */ }
+
+
+.intro-page, .search-form, .filter-bar, .info-bar {
+    margin-bottom: 35px; /* Espace entre les elements (gap 35px) */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+ /*** Hébergements & populaires ***/
+.hebergements-and-populaires {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.hebergements-and-populaires section {
+    border-radius: 0px;
+    width: 100%;
+    }
+
+
+
+/*** Populaires ***/
+.populaire {  
+    width:100%; } 
+
+
+
+/*** Hébergements ***/
+.hebergements-and-populaires .hebergements {  
+    width:100%; 
+    background: #FFFFFF; } 
+
+.hebergements-cards a {
+    width: 100%; }
+
+.hebergements .hebergements-cards {
+    flex-direction: column; }
+
+
+
+/*** Activités ***/
+.activites {
+    display: flex;
+    flex-direction: column;
+}
+
+.activites-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.activites-cards a {
+    width: 100%;
+}
+
+
+
+/*** Footer ***/
+footer {
+    flex-direction: column;
+}
+
 }
