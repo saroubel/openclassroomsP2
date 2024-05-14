@@ -151,8 +151,21 @@ body {
     flex-direction: column;
 }
 
+.activites-cards .card {
+    height: 200px;
+}
+
+.activites-cards img {
+    height: 141px;
+}
+
 .activites-cards a {
     width: 100%;
+    margin-bottom: 15px;  /*gap 15px entre les cartes activités*/
+}
+
+.activites-cards .card-content {
+    padding-top: 20px;
 }
 
 
