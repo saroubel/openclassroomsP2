@@ -52,10 +52,13 @@ body {
     justify-content: center; 
     /* Centré le formulaire de recherche*/ }  
 
+.search-bar {
+    padding-left: 20px; }
 
 .search-mobile {
-    display: inline-block;  
-    /* Afficher le bouton */ }
+    display: inline-block;  /* Afficher le bouton */
+    position: relative;     /* Activer le positionnement relatif */
+    left: -20px;            /* Décaler le bouton de 20px vers la gauche */ }
 
 
 .search {   
@@ -68,7 +71,8 @@ body {
 .filter-bar {
     display: flex; flex-direction: column;
     height: 161px; /* fixe */
-    max-width: initial; }
+    max-width: initial; /* Réinitialise la largeur max de la barre filtre à sa valeur initiale */
+}
 
 
 .filter-container { 
@@ -80,7 +84,7 @@ body {
 
 .filter-bar h2  {
     align-self: flex-start; 
-  /*s'aligner au côté gauche du conteneur*/ }
+    /* s'aligner au côté gauche du conteneur*/ }
 
 
 .filter { 
@@ -101,7 +105,7 @@ body {
 
 
 .intro-page, .search-form, .filter-bar, .info-bar {
-    margin-bottom: 35px; /* Espace entre les elements (gap 35px) */
+    margin-bottom: 35px; /* Espace entre les élements (gap 35px) */
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -173,6 +177,13 @@ body {
 /*** Footer ***/
 footer {
     flex-direction: column;
+    padding: 30px; 
 }
+
+.footer-link {
+    padding-bottom: 50px;
+    width: 100%;    /* Pour empêcher les link de revenir à la ligne, occupe toute la largeur dispo */
+}
+
 
 }
