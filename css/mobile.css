@@ -54,8 +54,11 @@ body {
 
 
 .search-mobile {
-    display: inline-block;  
-    /* Afficher le bouton */ }
+    display: inline-block;  /* Afficher le bouton */
+    position: relative;     /* Activer le positionnement relatif */
+    left: -20px;            /* Décaler le bouton de 20px vers la gauche */
+
+ }
 
 
 .search {   
