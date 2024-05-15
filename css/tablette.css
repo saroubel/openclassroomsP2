@@ -7,6 +7,9 @@
     body {
         max-width: 1024px;
         min-width: 768px;
+        overflow-x: hidden; /* Scroll Horizontale */
+         /* Pour masquer le débordement horizontal du contenu */ 
+         /* Aucune barre de défilement horizontale ne sera affichée pour accéder au contenu masqué  */ 
     }
 
 
@@ -20,6 +23,12 @@
         /* active l'affichage en bloc pour empiler ( h2 "Filtres" et le conteneur des filtres) verticalement */
     }  
 
+    .filter p {
+        font-size: clamp(17px, 1vw, 19px); 
+        /* Clamp : max et min et valeur de réference 1% de largeur de viewport */
+        /* Cette approche pour obtenir une taille de police responsive qui s'adapte à la largeur de la fenêtre d'affichage */
+    }
+   
 
 
     /* hébergements et les plus populaires */
