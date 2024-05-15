@@ -177,9 +177,13 @@ i.fa-solid.fa-magnifying-glass{
     gap: 10px;
     border: #D9D9D9 solid 2px; border-radius: 25px;
     padding: 4px 19px 4px 19px; 
-
+    cursor: pointer; 
+    
     /* gap 10px espace entre icône et txt */
-    /* baseline : aligne les éléments flexibles en utilisant leur ligne de base comme référence*/ }
+    /* baseline : aligne les éléments flexibles en utilisant leur ligne de base comme référence*/ 
+    /* curseur de la souris en forme de main qui sera affiché lorsqu'on passe la souris sur les filtres,
+       indiquant que l'élément est cliquable */  
+}
 
 .filter p { 
     font-size: 18px; 
